@@ -6,7 +6,7 @@ from mapping import sells_page, sells_id, sells_left, sells_price, receipt_page
 
 
 print("Укажите путь в папку, в которой будет находиться исходный файл")
-print("Пример: C:\\Users\\Касаткины\\Desktop\\Exceltest")
+print("Пример: C:\\Users\\Касаткины\\Desktop\\Exceltest", "-двойные \\")
 folder_path = input()
 os.chdir(folder_path)
 # если нет желания вводить путь каждый раз, можно ввести его вручную 1 раз
@@ -57,7 +57,7 @@ def sell_buy_product(products_list, receipt_flag):  # продажа и поку
     while True:
         call = input()
         if call == "продажа":
-            print("Введите наименование и количество товара")
+            print("Введите наименование и количество товара, разделитель - точка. Пример: Мешок семян.1")
             good = input()
             split = good.split(".")
             if seek_title(titles, split):
